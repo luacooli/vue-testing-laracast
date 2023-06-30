@@ -12,19 +12,19 @@ describe("Reminders", () => {
     expect(wrapper.contains("ul")).toBe(false);
   });
 
-  it("can add reminders", () => {
-    addReminder("Go to the store");
+  it("can add reminders", async () => {
+    await addReminder("Go to the store");
 
     expect(remindersList()).toContain("Go to the store");
   });
 
-  it("can delete any reminder", () => {
-    addReminder("Go to the store");
-    addReminder("Finish screencast");
+  it("can delete any reminder", async () => {
+    await addReminder("Go to the store");
+    await addReminder("Finish screencast");
 
     let deleteButton = wrapper.find("ul > li:first-child .remove");
 
-    deleteButton.trigger("click");
+    await deleteButton.trigger("click");
 
     expect(remindersList()).not.toContain("Go to the store");
   });
