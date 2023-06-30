@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Reminders />
+    <CouponCode />
   </div>
 </template>
 
 <script>
-import Reminders from '@/components/Reminders.vue'
+import CouponCode from "@/components/CouponCode.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Reminders
-  }
-}
+    CouponCode,
+  },
+};
 </script>
 
 <style>
