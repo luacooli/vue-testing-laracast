@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <CouponCode />
+    <Question :data-question="{ title: 'The title', body: 'The body' }" />
   </div>
 </template>
 
 <script>
-import CouponCode from "@/components/CouponCode.vue";
+import Question from "@/components/Question.vue";
 
 export default {
   name: "App",
   components: {
-    CouponCode,
+    Question,
   },
 };
 </script>
